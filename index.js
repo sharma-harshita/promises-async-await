@@ -4,30 +4,30 @@
 
 //resolve, reject, then ,catch, finally
 
-// function printAlpha(num, name, time){
-//     return new Promise ((resolve, reject)=>{
-//         if (num==2) {
-//             setTimeout(() => {
-//                 console.log(name);
-//                 resolve("Promise has been resolved")
-//             }, time);
-//         } else {
-//             console.log("Error");
-//             reject("Promise has been rejected")
-//         }
-//     })
-// }
+function printAlpha(num, name, time){
+    return new Promise ((resolve, reject)=>{
+        if (num==2) {
+            setTimeout(() => {
+                console.log(name);
+                resolve("Promise has been resolved")
+            }, time);
+        } else {
+            console.log("Error");
+            reject("Promise has been rejected")
+        }
+    })
+}
 
 //fat arrow functions 
 
-// function printVowels(){
-//     printAlpha(4,"Student", 2000)
-//     .then((data)=>console.log(data))
-//     .catch((err)=>console.log(err))
-//     // .finally(()=>console.log("DONE"))
-// }
+function printVowels(){
+    printAlpha(2,"Student", 2000)
+    .then((data)=>console.log(data))
+    .catch((err)=>console.log(err))
+    .finally(()=>console.log("DONE"))
+}
 
-
+printVowels()
 
 
 
@@ -38,14 +38,14 @@
 
 //REJECT : if promise gets failed due to any scenario, then its error can be captured in .catch function
 
-function printAlpha(name, time){
-    return new Promise ((resolve, reject)=>{
-        setTimeout(() => {
-            console.log(name);
-            resolve("Promise has been resolved")
-        }, time);
-    })
-}
+// function printAlpha(name, time){
+//     return new Promise ((resolve, reject)=>{
+//         setTimeout(() => {
+//             console.log(name);
+//             resolve("Promise has been resolved")
+//         }, time);
+//     })
+// }
 
 //Promise Chaining
 // function printVowels(){
